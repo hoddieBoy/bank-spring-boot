@@ -33,12 +33,16 @@ public class Account implements Persistable<String> {
         balance -= amount;
     }
 
-    public void setOwner(String owner) {
+    public Account setOwner(String owner) {
         this.owner = owner;
+
+        return this;
     }
 
-    public void setBalance(double balance) {
+    public Account setBalance(double balance) {
         this.balance = balance;
+
+        return this;
     }
 
     @Override

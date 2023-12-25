@@ -23,6 +23,10 @@ public class BankService {
     }
 
     public Account createAccount(AccountBodyRequest account) {
-        return null;
+        return accountRepository.save(
+                new Account()
+                        .setOwner(account.getOwner())
+                        .setBalance(account.getBalance())
+        );
     }
 }
